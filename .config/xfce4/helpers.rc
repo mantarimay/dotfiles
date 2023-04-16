@@ -1,0 +1,4 @@
+auto-online=false
+TerminalEmulator=footclient
+WebBrowser=firefox-esr
+TerminalEmulatorDismissed=true
