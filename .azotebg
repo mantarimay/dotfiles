@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+pkill swaybg
+swaybg -o 'eDP-1' -i "/home/may/.local/share/wallpapers/pexels-photo-7130498.jpeg" -m fill &
