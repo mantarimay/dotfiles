@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+
+<!--
+  This is a very simple config file with many options missing. For a complete
+  set of options with comments, see docs/rc.xml.all
+-->
+
+<labwc_config>
+
+  <core>
+    <gap>1</gap>
+  </core>
+
+  <theme>
+    <name>Fleon</name>
+    <cornerRadius>0</cornerRadius>
+    <font name="sans" size="10" />
+  </theme>
+
+  <focus>
+    <followMouse>yes</followMouse>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+
+  <snapping>
+    <range>1</range>
+    <topMaximize>yes</topMaximize>
+  </snapping>
+
+  <keyboard>
+    <default />
+    <!-- Use a different terminal emulator -->
+    <keybind key="W-Return">
+      <action name="None" />
+    </keybind>
+    <keybind key="W-2">
+      <action name="Execute" command="footclient" />
+    </keybind>
+    <!--
+      Remove a previously defined keybind
+      A shorter alternative is <keybind key="W-F4" />
+    -->
+    <keybind key="W-F4">
+      <action name="None" />
+    </keybind>
+  
+    <keybind key="W-3">                              
+      <action name="Execute" command="thunar" /> 
+    </keybind> 
+
+    <keybind key="W-1">                              
+      <action name="Execute" command="firefox-esr" /> 
+    </keybind> 
+
+    <keybind key="W-S-a">                              
+      <action name="Execute" command="bemenu-run" /> 
+    </keybind> 
+
+    <keybind key="W-a">                              
+      <action name="Execute" command="xfce4-popup-whiskermenu" /> 
+    </keybind> 
+
+    <keybind key="W-l">                              
+      <action name="Execute" command="gtklock" /> 
+    </keybind> 
+
+    <keybind key="W-S-e">                              
+        <action name="Exit" />
+    </keybind> 
+
+    <keybind key="W-S-r">                              
+        <action name="Reconfigure" />
+    </keybind> 
+
+    <keybind key="W-S-t">                              
+      <action name="Execute" command="systemctl -i poweroff" /> 
+    </keybind> 
+
+    <keybind key="W-S-Left">
+      <action name="GoToDesktop" to="left" />
+    </keybind>
+
+    <keybind key="W-S-Right">
+      <action name="GoToDesktop" to="Right" />
+    </keybind>
+
+    <keybind key="A-Left">
+      <action name="None" />
+    </keybind>
+    <keybind key="A-Right">
+      <action name="None" />
+    </keybind>
+    <keybind key="A-Up">
+      <action name="None" />
+    </keybind>
+    <keybind key="A-Down">
+      <action name="None" />
+    </keybind>
+
+    <keybind key="W-Up">
+      <action name="ToggleMaximize" />
+      <action name="Focus" />
+      <action name="Raise" />
+    </keybind>
+    <keybind key="W-Down">
+      <action name="Move" />
+    </keybind>
+
+<!--   
+    <keybind key="C-A-Left">
+      <action name="SendToDesktop" to="left" />
+      <action name="GoToDesktop" to="left" />
+    </keybind>
+-->
+    <keybind key="C-A-Left">
+      <action name="SendToDesktop" to="left" />
+    </keybind>
+
+    <keybind key="C-A-Right">
+      <action name="SendToDesktop" to="Right" />
+    </keybind>
+<!--
+    <keybind key="W-!">
+      <action name="GoToDesktop" to="1" />
+    </keybind>
+
+    <keybind key="W-@">
+      <action name="GoToDesktop" to="2" />
+    </keybind>
+
+    <keybind key="W-#">
+      <action name="GoToDesktop" to="3" />
+    </keybind>
+-->
+    <keybind key="Print">                                                   
+      <action name="Execute" command="grimshot --notify save" />                                
+    </keybind> 
+
+    <keybind key="W-Print">                                                   
+      <action name="Execute" command="grimshot --notify save area" />                                
+    </keybind> 
+
+    <keybind key="XF86_AudioLowerVolume">                                          
+      <action name="Execute" command="amixer sset Master 5%-" />                   
+    </keybind>                                                                     
+    <keybind key="XF86_AudioRaiseVolume">                                          
+      <action name="Execute" command="amixer sset Master 5%+" />                   
+    </keybind>                                                                     
+    <keybind key="XF86_AudioMute">                                                 
+      <action name="Execute" command="amixer sset Master toggle" />                
+    </keybind>                                                                     
+
+    <keybind key="XF86_MonBrightnessUp">                                           
+      <action name="Execute" command="brightnessctl -q set 2%+" />                   
+    </keybind>                                                                     
+    <keybind key="XF86_MonBrightnessDown">                                         
+      <action name="Execute" command="brightnessctl -q set 2%-" />                   
+    </keybind>     
+
+    <keybind key="XF86AudioPlay">                                           
+      <action name="Execute" command="mpc toggle" />                 
+    </keybind>                                                                     
+    <keybind key="XF86AudioNext">                                         
+      <action name="Execute" command="mpc next" />                 
+    </keybind> 
+    <keybind key="XF86AudioPrev">                                                  
+      <action name="Execute" command="mpc prev" />                                 
+    </keybind>                                                                     
+  </keyboard>
+
+  <mouse>
+    <default />
+    <!-- Show a custom menu on desktop right click -->
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="None" />
+      </mousebind>
+      <mousebind button="Left" action="Press">
+        <action name="None" />
+      </mousebind>
+   </context>
+  </mouse>
+
+ <desktops>
+    <popupTime>1000</popupTime>
+    <names>
+      <name>I</name>
+      <name>II</name>
+      <name>III</name>
+    </names>
+  </desktops>
+    
+</labwc_config>
